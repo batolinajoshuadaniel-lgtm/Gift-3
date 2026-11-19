@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff7f7">
+<title>My Princess ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#e9a9b8;--rose:#bd7186;--ink:#4b3940;--muted:#8d737b;--cream:#fff9f7;--line:#f1dfe3}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans","Noto Sans Thai",sans-serif;overflow-x:hidden}
+body.thai{font-family:"Noto Sans Thai","DM Sans",sans-serif}button{font:inherit;cursor:pointer}
+.grain{position:fixed;inset:0;pointer-events:none;opacity:.12;z-index:5;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E")}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,7vw,100px);position:absolute;z-index:8;top:0;width:100%;color:white}
+.brand{font-family:"Playfair Display",serif;font-size:22px;letter-spacing:.3px}.brand span{color:#ffdce5}
+.navright{display:flex;gap:12px;align-items:center}.lang,.music{border:1px solid #ffffff85;background:#ffffff20;color:white;border-radius:30px;padding:9px 15px;backdrop-filter:blur(8px);font-size:12px}
+.hero{min-height:760px;height:100svh;max-height:950px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:white;overflow:hidden;background:#735c66}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#1d18251c 0%,#261b2a30 45%,#21151e9c 100%),url("images/princess-01.webp") center 42%/cover;transform:scale(1.02)}
+.hero-content{position:relative;z-index:1;padding:30px 22px;margin-top:50px;animation:rise 1.2s ease both}
+.eyebrow{text-transform:uppercase;letter-spacing:4px;font-size:11px;font-weight:700;color:#ffe3e9}
+.hero h1{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(60px,10vw,118px);line-height:.98;margin:22px 0 20px;text-shadow:0 3px 25px #38212d40}
+.hero h1 em{font-weight:500;color:#ffdce5}.hero p{font-size:15px;line-height:1.8;max-width:460px;margin:0 auto 32px;color:#fff4f4}
+.primary{border:0;border-radius:40px;background:#fff7f5;color:#8d5366;padding:14px 25px;font-weight:700;box-shadow:0 9px 30px #25151c30;transition:.25s}
+.primary:hover{transform:translateY(-3px);box-shadow:0 13px 35px #25151c45}.scroll{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:3px;color:#fff9;z-index:2}
+section{padding:100px 22px}.wrap{width:min(1060px,100%);margin:auto}.section-kicker{text-transform:uppercase;letter-spacing:3px;font-size:10px;font-weight:700;color:var(--rose);text-align:center}
+h2{font-family:"Playfair Display",serif;font-size:clamp(38px,5vw,58px);font-weight:500;text-align:center;margin:13px 0 15px;color:#624651}
+.intro{max-width:610px;margin:0 auto;text-align:center;color:var(--muted);font-size:14px;line-height:1.9}
+.note-section{background:#fff0f2;position:relative;overflow:hidden}.note-card{max-width:720px;margin:40px auto 0;background:#fffdfb;border:1px solid #f4dfe4;padding:clamp(28px,6vw,58px);box-shadow:0 18px 55px #a96d7c12;position:relative;text-align:center}
+.note-card:before,.note-card:after{content:"♡";position:absolute;color:#e9b6c2;font-size:32px}.note-card:before{top:17px;left:22px}.note-card:after{bottom:12px;right:22px}
+.note-card p{font-family:"Playfair Display",serif;font-size:clamp(19px,3vw,25px);line-height:1.75;color:#765563;margin:0}
+.signature{font-family:"Playfair Display",serif;font-style:italic;color:var(--rose);margin-top:25px;font-size:20px}
+.gallery-section{background:#fffaf8}.gallery{columns:3 230px;column-gap:18px;margin-top:48px}.photo{display:block;width:100%;margin:0 0 18px;break-inside:avoid;position:relative;border:0;padding:0;background:#f5e6e8;overflow:hidden;border-radius:4px;cursor:zoom-in}
+.photo img{display:block;width:100%;height:auto;transition:transform .65s cubic-bezier(.2,.7,.2,1);}.photo:hover img{transform:scale(1.045)}
+.photo:after{content:"♡";position:absolute;right:14px;bottom:10px;color:white;font-size:22px;text-shadow:0 2px 10px #0008;opacity:0;transition:.25s}.photo:hover:after{opacity:1}
+.little-things{background:#fff0f2}.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:42px}
+.tile{background:#fffaf8;padding:28px 22px;text-align:center;border:1px solid #f4e2e6}.tile .icon{font-size:28px}.tile h3{font-family:"Playfair Display",serif;font-weight:500;font-size:21px;margin:13px 0 8px;color:#704c59}.tile p{font-size:12px;line-height:1.8;color:var(--muted);margin:0}
+.closing{padding:110px 22px;text-align:center;background:linear-gradient(135deg,#f6dce2,#fff7f3 60%,#f4e5e9)}
+.closing .big-heart{font-size:34px;color:#c77e91}.closing h2{font-size:clamp(42px,7vw,72px)}.closing p{max-width:520px;margin:0 auto 25px;color:#876d76;line-height:1.9;font-size:14px}
+footer{text-align:center;padding:25px;color:#a78b94;font-size:11px;letter-spacing:1px;background:#fff9f7}
+.modal{position:fixed;inset:0;background:#1f1720ed;z-index:20;display:none;align-items:center;justify-content:center;padding:22px}.modal.open{display:flex}.modal img{max-width:min(92vw,900px);max-height:85vh;object-fit:contain;box-shadow:0 10px 50px #0007}.close,.prev,.next{position:absolute;border:1px solid #ffffff55;background:#ffffff18;color:white;border-radius:50%;width:44px;height:44px;font-size:22px}.close{top:20px;right:20px}.prev{left:20px}.next{right:20px}
+.heart{position:fixed;bottom:-30px;z-index:15;color:#e99eb1;pointer-events:none;animation:floatUp 3.8s ease-in forwards;text-shadow:0 2px 10px #fff}
+@keyframes floatUp{to{transform:translateY(-110vh) rotate(35deg);opacity:0}}@keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:650px){.hero{min-height:700px}.hero:before{background-position:54% center}.tiles{grid-template-columns:1fr}.gallery{columns:2 135px;column-gap:10px}.photo{margin-bottom:10px}section{padding:75px 18px}.prev{left:8px}.next{right:8px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<nav><div class="brand">for <span>my princess ♡</span></div><div class="navright"><button class="lang" id="langBtn" aria-label="Change language">ไทย / EN</button></div></nav>
+<header class="hero">
+ <div class="hero-content">
+  <div class="eyebrow" data-en="A little corner of the world, just for you" data-th="มุมเล็ก ๆ ของโลกใบนี้ ที่มีไว้เพื่อเธอ">A little corner of the world, just for you</div>
+  <h1 data-en-html="My <em>Princess</em>" data-th-html="เจ้าหญิง<em>ของฉัน</em>">My <em>Princess</em></h1>
+  <p data-en="For the girl who makes ordinary moments feel like something worth keeping. This little page is all yours." data-th="แด่ผู้หญิงที่ทำให้ช่วงเวลาธรรมดากลายเป็นความทรงจำที่มีค่า เว็บเล็ก ๆ นี้เป็นของเธอ">For the girl who makes ordinary moments feel like something worth keeping. This little page is all yours.</p>
+  <button class="primary" onclick="document.querySelector('#letter').scrollIntoView({behavior:'smooth'})" data-en="A little something for you ↓" data-th="มีอะไรเล็ก ๆ อยากมอบให้เธอ ↓">A little something for you ↓</button>
+ </div><div class="scroll" data-en="SCROLL A LITTLE" data-th="เลื่อนลงอีกนิด">SCROLL A LITTLE</div>
+</header>
+<section class="note-section" id="letter"><div class="wrap">
+ <div class="section-kicker" data-en="A note from my heart" data-th="ข้อความจากใจฉัน">A note from my heart</div>
+ <h2 data-en="To my favorite person" data-th="ถึงคนโปรดของฉัน">To my favorite person</h2>
+ <p class="intro" data-en="Some feelings are too lovely to leave unspoken." data-th="ความรู้สึกบางอย่างงดงามเกินกว่าจะเก็บไว้โดยไม่พูดออกมา">Some feelings are too lovely to leave unspoken.</p>
+ <div class="note-card"><p data-en="If I could wrap up every beautiful view, every soft sunset, and every little moment that makes me smile, I would give them all to you. You deserve to be reminded that you are special—not just on a certain day, but in all the ordinary days in between. Keep being you, my princess. The world is a little softer with you in it." data-th="ถ้าฉันสามารถรวบรวมทุกวิวที่สวยงาม ทุกพระอาทิตย์ตกที่แสนอบอุ่น และทุกช่วงเวลาเล็ก ๆ ที่ทำให้ฉันยิ้มได้ ฉันก็อยากมอบทั้งหมดนั้นให้เธอ เธอสมควรได้รับการเตือนว่าเธอเป็นคนพิเศษ ไม่ใช่แค่ในวันสำคัญ แต่รวมถึงทุก ๆ วันธรรมดาด้วย เป็นตัวเองแบบนี้ต่อไปนะ เจ้าหญิงของฉัน โลกใบนี้อ่อนโยนขึ้นเมื่อมีเธออยู่">If I could wrap up every beautiful view, every soft sunset, and every little moment that makes me smile, I would give them all to you. You deserve to be reminded that you are special—not just on a certain day, but in all the ordinary days in between. Keep being you, my princess. The world is a little softer with you in it.</p><div class="signature" data-en="With all my affection ♡" data-th="ด้วยความรู้สึกดี ๆ ทั้งหมดที่มีให้ ♡">With all my affection ♡</div></div>
+</div></section>
+<section class="gallery-section" id="memories"><div class="wrap">
+ <div class="section-kicker" data-en="A gallery of you" data-th="แกลเลอรีของเธอ">A gallery of you</div>
+ <h2 data-en="Beautiful, in every frame." data-th="สวยงามในทุกภาพ">Beautiful, in every frame.</h2>
+ <p class="intro" data-en="A few little snapshots of a girl who deserves her own kind of magic. Tap any photo to see it closer." data-th="ภาพเล็ก ๆ ของผู้หญิงคนหนึ่งที่คู่ควรกับเวทมนตร์ในแบบของตัวเอง แตะที่รูปเพื่อดูภาพใหญ่ขึ้น">A few little snapshots of a girl who deserves her own kind of magic. Tap any photo to see it closer.</p>
+ <div class="gallery" id="gallery">
+  <button class="photo"><img src="images/princess-02.webp" alt="A lovely moment at a garden café" loading="lazy"></button>
+  <button class="photo"><img src="images/princess-03.webp" alt="A sunny day surrounded by flowers" loading="lazy"></button>
+  <button class="photo"><img src="images/princess-04.webp" alt="A beautiful mountain view" loading="lazy"></button>
+  <button class="photo"><img src="images/princess-05.webp" alt="A close-up portrait" loading="lazy"></button>
+  <button class="photo"><img src="images/princess-06.webp" alt="A mirror selfie" loading="lazy"></button>
+  <button class="photo"><img src="images/princess-07.webp" alt="A peaceful garden moment" loading="lazy"></button>
+  <button class="photo"><img src="images/princess-08.webp" alt="A mountain getaway" loading="lazy"></button>
+  <button class="photo"><img src="images/princess-09.webp" alt="A sweet smile" loading="lazy"></button>
+  <button class="photo"><img src="images/princess-10.webp" alt="A lovely day out" loading="lazy"></button>
+ </div>
+</div></section>
+<section class="little-things"><div class="wrap">
+ <div class="section-kicker" data-en="Little reminders" data-th="สิ่งเล็ก ๆ ที่อยากบอก">Little reminders</div>
+ <h2 data-en="Three things to remember" data-th="สามสิ่งที่อยากให้จำไว้">Three things to remember</h2>
+ <div class="tiles">
+  <article class="tile"><div class="icon">🌷</div><h3 data-en="You are enough" data-th="เธอดีพอเสมอ">You are enough</h3><p data-en="You never have to be anyone else to be wonderful." data-th="เธอไม่จำเป็นต้องเป็นใครเลย นอกจากตัวเธอเองก็ยอดเยี่ยมมากพอแล้ว">You never have to be anyone else to be wonderful.</p></article>
+  <article class="tile"><div class="icon">✨</div><h3 data-en="Keep shining" data-th="เปล่งประกายต่อไปนะ">Keep shining</h3><p data-en="Even on the quiet days, your light is still there." data-th="แม้ในวันที่เงียบเหงา แสงสว่างในตัวเธอก็ยังคงอยู่">Even on the quiet days, your light is still there.</p></article>
+  <article class="tile"><div class="icon">💗</div><h3 data-en="You are cherished" data-th="เธอมีค่ามากเสมอ">You are cherished</h3><p data-en="I hope you feel appreciated in all the little ways." data-th="ฉันหวังว่าเธอจะสัมผัสได้ว่าตัวเองมีค่ามากแค่ไหน แม้ผ่านสิ่งเล็ก ๆ น้อย ๆ">I hope you feel appreciated in all the little ways.</p></article>
+ </div>
+</div></section>
+<section class="closing"><div class="wrap"><div class="big-heart">♡</div><div class="section-kicker" data-en="And one last thing..." data-th="และอีกอย่างหนึ่ง...">And one last thing...</div><h2 data-en="Stay lovely, princess." data-th="น่ารักแบบนี้ต่อไปนะ เจ้าหญิง">Stay lovely, princess.</h2><p data-en="No matter how many pictures I put here, they could never capture every little thing that makes you, you. But I hope this page makes you smile." data-th="ไม่ว่าจะใส่รูปไว้ที่นี่มากแค่ไหน ก็ไม่มีรูปไหนเก็บรายละเอียดทุกอย่างที่เป็นตัวเธอได้หมด แต่ฉันหวังว่าเว็บหน้านี้จะทำให้เธอยิ้มได้นะ">No matter how many pictures I put here, they could never capture every little thing that makes you, you. But I hope this page makes you smile.</p><button class="primary" id="heartBtn" data-en="Send you a little love ♡" data-th="ส่งความรักเล็ก ๆ ให้เธอ ♡">Send you a little love ♡</button></div></section>
+<footer data-en="MADE WITH A LITTLE EXTRA LOVE · FOR MY PRINCESS" data-th="สร้างขึ้นด้วยความรักเล็ก ๆ ที่มีให้มากมาย · เพื่อเจ้าหญิงของฉัน">MADE WITH A LITTLE EXTRA LOVE · FOR MY PRINCESS</footer>
+<div class="modal" id="modal" aria-label="Photo viewer"><button class="close" id="close" aria-label="Close">×</button><button class="prev" id="prev" aria-label="Previous photo">‹</button><img id="modalImg" alt="Selected memory"><button class="next" id="next" aria-label="Next photo">›</button></div>
+<script>
+const langBtn=document.getElementById('langBtn');let lang='en';
+function setLanguage(next){lang=next;document.body.classList.toggle('thai',lang==='th');document.documentElement.lang=lang;document.querySelectorAll('[data-en]').forEach(el=>el.textContent=el.dataset[lang]);document.querySelectorAll('[data-en-html]').forEach(el=>el.innerHTML=el.dataset[lang+'Html']);langBtn.textContent=lang==='en'?'ไทย':'English';}
+langBtn.addEventListener('click',()=>setLanguage(lang==='en'?'th':'en'));
+const modal=document.getElementById('modal'),modalImg=document.getElementById('modalImg'),photos=[...document.querySelectorAll('.photo img')];let current=0;
+function showPhoto(i){current=(i+photos.length)%photos.length;modalImg.src=photos[current].src;modal.classList.add('open');document.body.style.overflow='hidden'}
+function closeModal(){modal.classList.remove('open');document.body.style.overflow=''}
+photos.forEach((img,i)=>img.parentElement.addEventListener('click',()=>showPhoto(i)));
+document.getElementById('close').onclick=closeModal;document.getElementById('prev').onclick=()=>showPhoto(current-1);document.getElementById('next').onclick=()=>showPhoto(current+1);
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});document.addEventListener('keydown',e=>{if(!modal.classList.contains('open'))return;if(e.key==='Escape')closeModal();if(e.key==='ArrowRight')showPhoto(current+1);if(e.key==='ArrowLeft')showPhoto(current-1)});
+function hearts(){for(let i=0;i<18;i++){let h=document.createElement('span');h.className='heart';h.textContent=['♡','♥','✧'][Math.floor(Math.random()*3)];h.style.left=Math.random()*100+'vw';h.style.fontSize=(15+Math.random()*22)+'px';h.style.animationDelay=(Math.random()*1.2)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),5000)}}
+document.getElementById('heartBtn').addEventListener('click',hearts);
+</script>
+</body></html>
